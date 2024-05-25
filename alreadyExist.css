@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+       font-size: inherit;
+       font-family: 'poppins', sans-serif;
+
+
+}
+
+html {
+       font-size: 62.5%;
+       background-image: linear-gradient(to right, black, rgb(3, 3, 28), rgb(3, 3, 28), black);
+       overflow-x: hidden;
+}
+
+:root {
+       --text-color: #fff;
+       --buttons-color: #DB4444;
+       --green: #00953c;
+       --text-second-color: rgb(174, 172, 172);
+       --star-color: #FFAD33;
+       --star-dark-color: #8D8D8D;
+       --blue-color: #326994;
+       --Circle-color: #817D7D;
+       --blue: #5557d1;
+
+       --bg-color: #09031B;
+       --sec-bg-color: #344162;
+       --text-color: #ffffff;
+       --white: #fdfdfd;
+       --sub-color: #e4d4f9;
+
+}
+
+.all {
+       width: 100vw;
+       height: 100vh;
+
+
+       font-family: 'Times New Roman', Times, serif;
+       animation: transitionIN 1s;
+
+
+}
+
+.smallScreen {
+       display: none;
+}
+
+.search-icon {
+       color: var(--text-color);
+}
+
+.heart {
+       color: var(--text-color);
+}
+
+.home-nav {
+
+       display: flex;
+       padding: 1rem;
+       justify-content: space-around;
+       font-size: 1.5rem;
+       position: relative;
+       top: 1.5rem;
+       font-weight: 800;
+
+}
+
+.i {
+       margin-right: 1rem;
+       text-decoration: none;
+       color: var(--text-color);
+       transition: all 0.5s;
+       font-weight: 800;
+
+}
+
+h2 {
+       color: var(--text-color);
+}
+
+.home-nav h2 {
+       font-size: 2rem;
+}
+
+.i:hover {
+
+       color: var(--buttons-color);
+}
+
+
+.input input {
+       border: none;
+       outline: none;
+       font-size: 1.25rem;
+       width: 22rem;
+       height: 3rem;
+       border-radius: 2rem;
+       color: black;
+       text-align: center;
+
+}
+
+.container {
+       width: 100vw;
+       height: 100vh;
+       position: absolute;
+       display: flex;
+       overflow: hidden;
+       z-index: -1;
+
+}
+
+.bubbles {
+       position: relative;
+       display: flex;
+}
+
+.bubbles span {
+       position: relative;
+       width: 3rem;
+       height: 3rem;
+       background-color: #4fc3dc;
+       margin: 0 0.4rem;
+       border-radius: 50%;
+       box-shadow: 0 0 0 1rem #4fc3dc44, 0 0 5rem #4fc3dc, 0 0 10rem #4fc3dc;
+       animation: animate ease-in infinite;
+       animation-duration: calc(250s/var(--i));
+
+
+
+
+}
+
+.bubbles span:nth-child(even) {
+       background-color: #ff2d75;
+       box-shadow: 0 0 0 1rem #ff2d7544, 0 0 5rem #ff2d75,
+              0 0 10rem #ff2d75;
+}
+
+
+.successMsg {
+       display: flex;
+       flex-direction: column;
+       width: 100vw;
+       height: 100vh;
+       color: white;
+       align-items: center;
+       justify-content: center;
+       font-size: 8rem;
+
+
+
+}
+
+.successMsg h1:nth-child(1) {
+       color: #f9a34d;
+}
+
+.successMsg h1:nth-child(2) {
+       color: #66adf3;
+}
+
+@keyframes animate {
+       0% {
+              opacity: 0.1;
+              transform: translateY(200vh) scale(0);
+       }
+
+       100% {
+              opacity: 0.1;
+              transform: translateY(-10vh) scale(1);
+
+       }
+
+}
+
+
+@keyframes transitionIN {
+       from {
+              opacity: 0;
+              transform: scale(1.2);
+
+
+       }
+
+       to {
+              opacity: 1;
+              transform: scale(1);
+       }
+}
+
+
+
+@keyframes borderRotate {
+       0% {
+              border-top: 0.3rem solid rgb(75, 183, 255);
+              border-bottom: 0.3rem solid rgb(75, 183, 255);
+              border-right: 0.3rem solid rgb(255, 75, 75);
+              border-left: 0.3rem solid rgb(255, 75, 75);
+
+       }
+
+       20% {
+              border-top: 0.3rem solid rgb(255, 75, 75);
+              border-bottom: 0.3rem solid rgb(75, 183, 255);
+              border-right: 0.3rem solid rgb(255, 75, 75);
+              border-left: 0.3rem solid rgb(255, 75, 75);
+
+
+       }
+
+       40% {
+              border-top: 0.3rem solid rgb(255, 75, 75);
+              border-bottom: 0.3rem solid rgb(75, 183, 255);
+              border-right: 0.3rem solid rgb(75, 183, 255);
+              border-left: 0.3rem solid rgb(255, 75, 75);
+
+
+       }
+
+       60% {
+              border-top: 0.3rem solid rgb(255, 75, 75);
+              border-bottom: 0.3rem solid rgb(255, 75, 75);
+              border-right: 0.3rem solid rgb(75, 183, 255);
+              border-left: 0.3rem solid rgb(255, 75, 75);
+
+       }
+
+       80% {
+              border-top: 0.3rem solid rgb(255, 75, 75);
+              border-bottom: 0.3rem solid rgb(255, 75, 75);
+              border-right: 0.3rem solid rgb(75, 183, 255);
+              border-left: 0.3rem solid rgb(75, 183, 255);
+
+       }
+
+       100% {
+              border-top: 0.3rem solid rgb(75, 183, 255);
+              border-bottom: 0.3rem solid rgb(75, 183, 255);
+              border-right: 0.3rem solid rgb(255, 75, 75);
+              border-left: 0.3rem solid rgb(255, 75, 75);
+
+       }
+}
+
+.submitBtn button {
+       width: 24rem;
+       height: 4rem;
+       background-image: linear-gradient(to right, #3481ae, #7b68a7);
+       border: none;
+       outline: none;
+       border-radius: 1rem;
+       transition: all 0.3s;
+       cursor: pointer;
+       font-size: 2rem;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: 800;
+       margin-top: 4rem;
+
+}
+
+button:active {
+       transform: scale(0.92);
+}
+
+button:hover {
+
+       animation-name: hoverOnSubmitBtn;
+       animation-duration: 2s;
+       animation-iteration-count: infinite;
+       animation-timing-function: linear;
+       animation-fill-mode: backwards;
+
+
+
+}
+
+@keyframes hoverOnSubmitBtn {
+       0% {
+              background-image: linear-gradient(to right, #8ec8cc, #2a5fb3);
+
+       }
+
+       5% {
+              background-image: linear-gradient(to right, #8ea7cc, #2a4fb3);
+
+       }
+
+       10% {
+              background-image: linear-gradient(to right, #8ea0cc, #2a48b3);
+       }
+
+       15% {
+
+              background-image: linear-gradient(to right, #8e9dcc, #2a3fb3);
+       }
+
+       20% {
+              background-image: linear-gradient(to right, #8e97cc, #2a3ab3);
+       }
+
+       25% {
+              background-image: linear-gradient(to right, #928ecc, #2a2cb3);
+       }
+
+       30% {
+              background-image: linear-gradient(to right, #928ecc, #382ab3);
+       }
+
+       35% {
+              background-image: linear-gradient(to right, #928ecc, #382ab3);
+       }
+
+       40% {
+              background-image: linear-gradient(to right, #928ecc, #382ab3);
+       }
+
+       45% {
+              background-image: linear-gradient(to right, #928ecc, #382ab3);
+       }
+
+       50% {
+              background-image: linear-gradient(to right, #978ecc, #352ab3);
+       }
+
+       55% {
+              background-image: linear-gradient(to right, #908ecc, #2a2ab3);
+       }
+
+       60% {
+              background-image: linear-gradient(to right, #8e95cc, #2a35b3);
+       }
+
+       65% {
+              background-image: linear-gradient(to right, #8e9ccc, #2a4ab3);
+       }
+
+       70% {
+              background-image: linear-gradient(to right, #8ea4cc, #2a63b3);
+       }
+
+       75% {
+              background-image: linear-gradient(to right, #8eabcc, #2a73b3);
+       }
+
+       80% {
+              background-image: linear-gradient(to right, #8eb7cc, #2a73b3);
+       }
+
+       85% {
+              background-image: linear-gradient(to right, #8eb7cc, #2a65b3);
+       }
+
+       90% {
+              background-image: linear-gradient(to right, #8ec8cc, #2a5fb3);
+       }
+
+       95% {
+              background-image: linear-gradient(to right, #8ec8cc, #2a5fb3);
+       }
+
+       100% {
+              background-image: linear-gradient(to right, #8ec8cc, #2a5fb3);
+
+       }
+}
+
+@media (max-width:800px) {
+       .input {
+              display: none;
+       }
+
+       .successMsg {
+
+              font-size: 4rem;
+       }
+
+}
