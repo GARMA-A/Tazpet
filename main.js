@@ -8,10 +8,11 @@ const displaySeconds = document.querySelector('#displaySeconds');
 // labelDate.textContent = new Intl.DateTimeFormat('en-GD' , option).format(now);
 const displayDate = function () {
        const now = new Date();
+       const hours = Number(now.getHours().toFixed());
        displayDays.innerHTML = `${now.getDate()} <span>:</span>`;
-       displayHours.innerHTML = `${now.getHours().toFixed()} <span>:</span>`;
+       displayHours.innerHTML = `${hours%12} <span>:</span>`;
        displayMinuts.innerHTML = `${now.getMinutes()} <span>:</span>`;
-       displaySeconds.innerHTML = `${now.getSeconds()} `;
+       displaySeconds.innerHTML = `${now.getSeconds()} ${hours>=12?"Pm":"Am"}  `;
 };
 const refreshTimer = setInterval(displayDate, 100);
 
