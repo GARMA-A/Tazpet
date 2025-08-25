@@ -28,11 +28,11 @@ const logIn = function (e) {
        { 
               
                localStorage.setItem('currentUserName',(currentAccount1?.firstName||currentAccount2?.firstName) );
-              window.location.href = "success.html";       
+              window.location.href = "../success/success.html";       
        }
        else
        {
-               window.location.href = "loginFalid.html";   
+               window.location.href = "../login-failed/loginFalid.html";   
        }
 };
 

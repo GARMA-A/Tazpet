@@ -69,7 +69,7 @@ const addAccount = function (e) {
               const existingAccount1 = allAccountsUser.find(account => account.firstName === firstNameValue && account.secondName === secondNameValue);
               const existingAccount2 = allAccountsHard.find(account => account.firstName === firstNameValue && account.secondName === secondNameValue);
               if (existingAccount1 || existingAccount2) {
-                     window.location.href = "alreadyExist.html";  
+                     window.location.href = "../user-exists/alreadyExist.html";  
                      templateAccount = {};
               }
               else {
@@ -78,7 +78,7 @@ const addAccount = function (e) {
                      localStorage.setItem('allUserLocalAccounts', JSON.stringify(allUserLocalAccountsArrayOfObj));  
                      localStorage.setItem('currentUserName', "");
                      localStorage.setItem('currentUserName',(firstNameValue) );
-                     window.location.href = "success.html";
+                     window.location.href = "../success/success.html";
               }
              
        }
