@@ -8,12 +8,12 @@ const logOut = document.querySelector('#logOut');
 
 haveAccountBtn.addEventListener('click', function (e) {
        e.preventDefault();
-       window.location.href = "login.html";
+       window.location.href = "../login/login.html";
 
 });
 createAcountBtn.addEventListener('click', function (e) {
        e.preventDefault();
-       window.location.href = "newAcount.html";
+       window.location.href = "../signup/newAcount.html";
 
 });
 

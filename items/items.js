@@ -1,20 +1,3 @@
-/* select the time elements*/ 
-const displayDays = document.querySelector('#displayDays');
-const displayHours = document.querySelector('#displayHours');
-const displayMinuts = document.querySelector('#displayMinuts');
-const displaySeconds = document.querySelector('#displaySeconds');
-/*****************************************/
-/*****************************************/
-// labelDate.textContent = new Intl.DateTimeFormat('en-GD' , option).format(now);
-const displayDate = function () {
-       const now = new Date();
-       const hours = Number(now.getHours().toFixed());
-       displayDays.innerHTML = `${now.getDate()} <span>:</span>`;
-       displayHours.innerHTML = `${hours%12} <span>:</span>`;
-       displayMinuts.innerHTML = `${now.getMinutes()} <span>:</span>`;
-       displaySeconds.innerHTML = `${now.getSeconds()} ${hours>=12?"Pm":"Am"}  `;
-};
-const refreshTimer = setInterval(displayDate, 100);
 
 /**************RANGE INPUT ******************************/
  const rangeInput = document.querySelectorAll('.inputRange input[type="range"]');
@@ -129,7 +112,7 @@ const showPopWindow3 = function () {
        const imgContainer = popWindow3.querySelector('.imgContainer');
        const img = imgContainer.querySelector('img');
        img.src = src;
-       /******************************* */
+              /******************************* */
        /*Replace the Title*/
        const des = this.querySelector('.discription');
        const titleOfClickedItem = des.querySelector('.title');
@@ -172,7 +155,7 @@ slider3.addEventListener('input', (event)=>value3.textContent = event.target.val
 
 const btnsToCartPage = document.querySelectorAll('#BtnOfCart');
 
-const goToCartPage = () => window.location.href = "cart.html";
+const goToCartPage = () => window.location.href = "../cart/cart.html";
 
 btnsToCartPage.forEach((btn) => btn.addEventListener('click', goToCartPage));
 
